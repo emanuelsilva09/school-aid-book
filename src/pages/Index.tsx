@@ -78,11 +78,11 @@ const Index = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 drop-shadow-sm">
-            🏫 Sistema de Gestão Escolar
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Sistema de Gestão Escolar
           </h1>
-          <p className="text-lg text-muted-foreground drop-shadow-sm">
-            Suporte Técnico e Reservas de Sala - Um ambiente acolhedor para todos
+          <p className="text-lg text-muted-foreground">
+            Suporte Técnico e Reservas de Sala
           </p>
         </div>
 
@@ -112,12 +112,12 @@ const Index = () => {
         {activeForm === 'support' && (
           <Card className="glass-card border-0">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <Monitor className="w-6 h-6 text-primary" />
-                🔧 Requisição de Suporte Técnico
+              <CardTitle className="flex items-center gap-2">
+                <Monitor className="w-5 h-5" />
+                Requisição de Suporte Técnico
               </CardTitle>
-              <CardDescription className="text-base">
-                Descreva o problema técnico para que possamos ajudar rapidamente. Estamos aqui para apoiar!
+              <CardDescription>
+                Descreva o problema técnico para que possamos ajudar rapidamente.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -212,12 +212,12 @@ const Index = () => {
         {activeForm === 'reservation' && (
           <Card className="glass-card border-0">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-xl">
-                <Users className="w-6 h-6 text-primary" />
-                📚 Reserva de Sala de Informática
+              <CardTitle className="flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                Reserva de Sala de Informática
               </CardTitle>
-              <CardDescription className="text-base">
-                Selecione os horários disponíveis para reservar a sala. Facilitamos o seu ensino!
+              <CardDescription>
+                Selecione os horários disponíveis para reservar a sala.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -349,20 +349,20 @@ const Index = () => {
         {/* Success Modal */}
         {showSuccessModal && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="glass-card p-8 rounded-2xl max-w-md w-full animate-in zoom-in-95 duration-500">
-            <div className="text-center">
-              <div className="mx-auto w-20 h-20 bg-success rounded-full flex items-center justify-center mb-6 shadow-lg">
-                <CheckCircle className="w-10 h-10 text-success-foreground" />
+            <div className="glass-card p-8 rounded-2xl max-w-md w-full animate-in zoom-in-95 duration-300">
+              <div className="text-center">
+                <div className="mx-auto w-16 h-16 bg-success rounded-full flex items-center justify-center mb-4">
+                  <CheckCircle className="w-8 h-8 text-success-foreground" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Sucesso!</h3>
+                <p className="text-muted-foreground">
+                  {activeForm === 'support' 
+                    ? 'A sua requisição de suporte foi enviada com sucesso.'
+                    : 'A sua reserva foi registada com sucesso.'
+                  }
+                </p>
               </div>
-              <h3 className="text-2xl font-semibold mb-3 text-foreground">✨ Sucesso!</h3>
-              <p className="text-muted-foreground text-lg">
-                {activeForm === 'support' 
-                  ? '🎉 A sua requisição de suporte foi enviada com sucesso. Em breve entraremos em contacto!'
-                  : '🎉 A sua reserva foi registada com sucesso. Obrigado pela confiança!'
-                }
-              </p>
             </div>
-          </div>
           </div>
         )}
       </div>
