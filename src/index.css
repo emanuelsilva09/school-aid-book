@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* School Administration Design System - Professional & Clean */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 27%;
+    --card-translucent: 0 0% 100% / 0.95;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 84% 49%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 215 25% 27%;
+    --secondary-hover: 220 14% 91%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 57%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 214 84% 56%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --available: 142 69% 58%;
+    --pending: 38 92% 50%;
+    --reserved: 0 84% 60%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 214 84% 56%;
+
+    --radius: 0.75rem;
+
+    /* School-specific design tokens */
+    --glass-bg: 0 0% 100% / 0.9;
+    --glass-border: 0 0% 100% / 0.2;
+    --shadow-soft: 0 4px 20px 0 rgb(0 0 0 / 0.1);
+    --shadow-medium: 0 8px 30px 0 rgb(0 0 0 / 0.15);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Time grid colors */
+    --grid-available: 142 69% 95%;
+    --grid-pending: 38 92% 95%;
+    --grid-reserved: 0 84% 95%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +79,43 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 215 28% 17%;
+    --foreground: 0 0% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 28% 17%;
+    --card-foreground: 0 0% 95%;
+    --card-translucent: 215 28% 17% / 0.95;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 28% 17%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 84% 49%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 0 0% 95%;
+    --secondary-hover: 215 25% 23%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 25% 27%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 214 84% 56%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 214 84% 56%;
+
+    --glass-bg: 215 28% 17% / 0.9;
+    --glass-border: 0 0% 100% / 0.1;
+
+    --grid-available: 142 69% 15%;
+    --grid-pending: 38 92% 15%;
+    --grid-reserved: 0 84% 15%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +133,51 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    background-image: url('/src/assets/school-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-soft);
+  }
+
+  .time-slot {
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid hsl(var(--border));
+  }
+
+  .time-slot:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .time-slot.available {
+    background: hsl(var(--grid-available));
+    border-color: hsl(var(--available));
+  }
+
+  .time-slot.pending {
+    background: hsl(var(--grid-pending));
+    border-color: hsl(var(--pending));
+  }
+
+  .time-slot.reserved {
+    background: hsl(var(--grid-reserved));
+    border-color: hsl(var(--reserved));
+    cursor: not-allowed;
+  }
+
+  .time-slot.selected {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border-color: hsl(var(--primary));
   }
 }
