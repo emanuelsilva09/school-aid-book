@@ -2,64 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* School Administration Design System - Professional & Clean */
+/* School Administration Design System - Warm & Welcoming */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    --background: 28 25% 97%;
+    --foreground: 25 25% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
-    --card-translucent: 0 0% 100% / 0.95;
+    --card: 28 25% 97%;
+    --card-foreground: 25 25% 25%;
+    --card-translucent: 28 25% 97% / 0.95;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 28 25% 97%;
+    --popover-foreground: 25 25% 25%;
 
-    --primary: 214 84% 56%;
+    --primary: 24 90% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 214 84% 49%;
+    --primary-hover: 24 90% 52%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 215 25% 27%;
-    --secondary-hover: 220 14% 91%;
+    --secondary: 142 35% 85%;
+    --secondary-foreground: 25 25% 25%;
+    --secondary-hover: 142 35% 78%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 57%;
+    --muted: 142 20% 92%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 214 84% 56%;
+    --accent: 142 45% 65%;
     --accent-foreground: 0 0% 100%;
 
-    --success: 142 76% 36%;
+    --success: 142 65% 48%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 38 92% 50%;
+    --warning: 38 85% 65%;
     --warning-foreground: 0 0% 100%;
 
-    --available: 142 69% 58%;
-    --pending: 38 92% 50%;
-    --reserved: 0 84% 60%;
+    --available: 142 55% 55%;
+    --pending: 38 85% 65%;
+    --reserved: 15 75% 65%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 15 75% 65%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 214 84% 56%;
+    --border: 142 20% 85%;
+    --input: 142 20% 88%;
+    --ring: 24 90% 58%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* School-specific design tokens */
-    --glass-bg: 0 0% 100% / 0.9;
-    --glass-border: 0 0% 100% / 0.2;
-    --shadow-soft: 0 4px 20px 0 rgb(0 0 0 / 0.1);
-    --shadow-medium: 0 8px 30px 0 rgb(0 0 0 / 0.15);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Warm & welcoming design tokens */
+    --glass-bg: 28 40% 98% / 0.9;
+    --glass-border: 142 30% 80% / 0.3;
+    --shadow-soft: 0 4px 20px 0 rgb(24 90 58 / 0.1);
+    --shadow-medium: 0 8px 30px 0 rgb(24 90 58 / 0.15);
+    --shadow-warm: 0 10px 40px 0 rgb(24 90 58 / 0.2);
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     /* Time grid colors */
-    --grid-available: 142 69% 95%;
-    --grid-pending: 38 92% 95%;
-    --grid-reserved: 0 84% 95%;
+    --grid-available: 142 45% 92%;
+    --grid-pending: 38 75% 92%;
+    --grid-reserved: 15 65% 92%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -79,43 +80,43 @@
   }
 
   .dark {
-    --background: 215 28% 17%;
-    --foreground: 0 0% 95%;
+    --background: 25 35% 12%;
+    --foreground: 28 25% 92%;
 
-    --card: 215 28% 17%;
-    --card-foreground: 0 0% 95%;
-    --card-translucent: 215 28% 17% / 0.95;
+    --card: 25 35% 12%;
+    --card-foreground: 28 25% 92%;
+    --card-translucent: 25 35% 12% / 0.95;
 
-    --popover: 215 28% 17%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 25 35% 12%;
+    --popover-foreground: 28 25% 92%;
 
-    --primary: 214 84% 56%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 214 84% 49%;
+    --primary: 24 90% 65%;
+    --primary-foreground: 25 35% 12%;
+    --primary-hover: 24 90% 60%;
 
-    --secondary: 215 25% 27%;
-    --secondary-foreground: 0 0% 95%;
-    --secondary-hover: 215 25% 23%;
+    --secondary: 142 25% 20%;
+    --secondary-foreground: 28 25% 92%;
+    --secondary-hover: 142 25% 16%;
 
-    --muted: 215 25% 27%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 142 15% 18%;
+    --muted-foreground: 28 15% 70%;
 
-    --accent: 214 84% 56%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 142 45% 55%;
+    --accent-foreground: 25 35% 12%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 15 75% 65%;
+    --destructive-foreground: 25 35% 12%;
 
-    --border: 215 25% 27%;
-    --input: 215 25% 27%;
-    --ring: 214 84% 56%;
+    --border: 142 15% 25%;
+    --input: 142 15% 22%;
+    --ring: 24 90% 65%;
 
-    --glass-bg: 215 28% 17% / 0.9;
-    --glass-border: 0 0% 100% / 0.1;
+    --glass-bg: 25 45% 8% / 0.9;
+    --glass-border: 142 20% 30% / 0.2;
 
-    --grid-available: 142 69% 15%;
-    --grid-pending: 38 92% 15%;
-    --grid-reserved: 0 84% 15%;
+    --grid-available: 142 35% 15%;
+    --grid-pending: 38 65% 15%;
+    --grid-reserved: 15 55% 15%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -134,7 +135,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background-image: url('/src/assets/school-background.jpg');
+    background-image: url('/src/assets/school-warm-background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -143,9 +144,9 @@
 
   .glass-card {
     background: hsl(var(--glass-bg));
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border: 1px solid hsl(var(--glass-border));
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-warm);
   }
 
   .time-slot {
@@ -155,8 +156,8 @@
   }
 
   .time-slot:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-medium);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-warm);
   }
 
   .time-slot.available {
